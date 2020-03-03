@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="style.css" rel="stylesheet" type="text/css" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>RockPaperScissors</title>
+     </head>
+   <body>
+        <script>
+            function computerPlay(){
+                let plays = ["Rock", "Paper", "Scissors"];
+                return plays[Math.round(Math.random()*2)];
+
+            }
+            console.log(computerPlay());
+
+
+        </script>
+   </body>
+
+</html>
