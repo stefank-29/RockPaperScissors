@@ -8,6 +8,24 @@
         <title>RockPaperScissors</title>
      </head>
    <body>
+        <div class = "buttons">
+            <button id = "rock">Rock</button>
+            <button id = "paper">Paper</button>
+            <button id = "scissors">Scissors</button>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
         <script>
             function computerPlay(){
                 let plays = ["Rock", "Paper", "Scissors"];
@@ -61,15 +79,20 @@
                 }
 
             }
-            
+            const buttons = Array.from(document.querySelectorAll('button')) ;
+            buttons.forEach(button => button.addEventListener('click', play));
             //console.log(playRound(playerSelection, computerSelection));
-            function game(rounds){
+            
+            /*function game(){
                 let ply = 0, cmp = 0;
-                for(let i = 0; i < rounds; i++){
-                    const player = prompt("Rock, Paper or Scissors?");
-                    const computer = computerPlay();
-                    let result = playRound(player, computer);
-                    if(result == -1)
+                for(let i = 0; i < 1000000; i++){
+                    
+            
+                    
+                    //const player = prompt("Rock, Paper or Scissors?");
+                    //const computer = computerPlay();
+                    //let result = playRound(player, computer);
+                    if(result == -1)  // nereseno
                         continue;
 
                     if(result)
@@ -85,7 +108,32 @@
                         console.log("You Lost the game!");
 
             }
-            game(5);
+            game();*/
+            
+            let result = 0;
+            let ply = 0;
+            let cmp = 0;
+            function play(e){
+               let computer = computerPlay();
+               let result = playRound(e.target.id, computer);
+               //let result = playRound(player, computer);
+                if(result != -1){
+
+                if(result)
+                    ply++;
+                else 
+                    cmp++;
+                }
+                console.log(result);
+                console.log(ply);
+                console.log(cmp);   
+            }
+            
+        
+
+            
+
+            
         </script>
    </body>
 
