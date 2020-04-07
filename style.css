@@ -40,7 +40,10 @@ button{
         
 }
 #resetBtn{
-    display: block;    
+    display: block;   
+    position: absolute;
+    top: 700px;
+    left: 808px;
     border: 4px solid  #3e4fec;
     border-radius: 5px;
     margin: 50px auto;
